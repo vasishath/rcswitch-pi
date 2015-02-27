@@ -1,6 +1,6 @@
 /*
  Usage: ./send <systemCode> <unitCode> <command>
- Command is 0 for OFF and 1 for ON
+ Commands will be characters
  */
 
 #include "RCSwitch.h"
@@ -25,10 +25,10 @@ int main(int argc, char *argv[]) {
 	mySwitch.enableTransmit(PIN);
     
     switch(command) {
-        case 1:
+        case a:
             mySwitch.switchOn(systemCode, unitCode);
             break;
-        case 0:
+        case b:
             mySwitch.switchOff(systemCode, unitCode);
             break;
         default:
